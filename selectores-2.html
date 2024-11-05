@@ -1,0 +1,952 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores CSS</title>
+		<!--  FAVICON -->
+    <link rel="shortcut icon" href="assets/img/css-icono.svg"  type="image/x-icon" />
+	
+<!--  HOJAS DE ESTILO -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+	<link rel="stylesheet" href="assets/css/nuevo-style.css" />
+	<link rel="stylesheet" href="assets/css/styleselectores2.css" />
+<!--  Fuentes -->
+	 <link rel="preconnect" href="https://rsms.me/">
+     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+</head>
+<body>
+
+    <!-- Header -->
+	  <header>
+        <div class="logo">F5</div>
+        <h3>Selectores 2 CSS</h3>
+		<a href="home.html" target="_blank"> <img class="home" src="assets/img/casa-blanca.png" alt="logo casa" width="25px"></a>
+    </header>
+ 
+
+    <!-- Menu -->
+    <nav class="menu">
+        <!-- Links a las sections -->
+		<!--<h2 class="subtitulo" >Reset</h2>-->
+        <div class="subgrupo">    
+        <a href="#section1" class="principal">Reset</a>
+       </div>
+       <hr>
+	   <!--<h2>Pseudo Elementos</h2>-->
+       <div class="subgrupo">  
+	    <a href="#section2" class="principal">Pseudo Elementos</a>
+        <a href="#section3">::first-line</a>
+        <a href="#section4">::first-letter</a> 
+        <a href="#section5">Pseudoelementos y clases HTML</a> 
+        <a href="#section6">Multiples pseudo elementos</a> 
+        <a href="#section7">::before</a>
+        <a href="#section8">::after</a>
+        <a href="#section9">::marker</a>
+        <a href="#section10">::selection</a>
+		<a href="#section11">::placeholder</a>
+       </div>
+    <hr>
+   	   <!--<h2 class="subtitulo">Pseudo Clases</h2>-->
+    <div class="subgrupo"> 
+	    <a href="#section12" class="principal">Pseudo Clases</a>
+        <a href="#section13">:hover</a>
+        <a href="#section14">:link</a>
+        <a href="#section15">:visited</a>
+        <a href="#section16">:active</a>
+        <a href="#section17">Pseudo clases en link</a>
+		<a href="#section18">Childs</a>
+    </div>
+    <hr>
+	  <!--<h2 class="subtitulo">Import</h2>-->
+    <div class="subgrupo"> 
+        <a href="#section19" class="principal">@import</a>
+    </div>
+	 <hr>
+		  <!--<h2 class="subtitulo" >Conclusión</h2>-->
+    <!--<div class="subgrupo"> 
+        <a href="#section20" class="principal">Conclusión</a>
+    </div>-->
+    </nav>
+  <hr>
+    <!-- Contenedor principal Sections -->
+    <div class="contenido">
+	<!------------------ RESET ----------------------->	
+        <h2 class="titulo-cabecera-grupo"> Reset</h2>
+        <hr>
+        <!-- Sections con IDs -->
+		 <!-- section 1 -->
+     <section id="section1">
+		<div class="capitulo">
+		 <div class="tema">
+                <h2 class="titulo-grupo">Reset</h2>
+                <p>Cada navegador tiene por defecto sus propios estilos que aplica a las principales etiquetas.</p>
+                <p>Por ejemplo:  la mayoría de navegadores da márgenes a la etiqueta <span class="codigo-texto">&lt;body&gt;</span>, o le da un determinado tamaño y margen a la etiqueta <span class="codigo-texto">&lt;h1&gt;</span>.</p>
+				<br>
+                <p>Para eliminar estos estilos y que no interfieran con nuestras clases se suelen usar unas hojas de estilos que anulan o “resetean” estos estilos predefinidos.</p>
+				<p>Podemos incorporar estos archivos de reset a nuestro proyecto mediante un link al archivo externo.</p>
+				<p><strong>El link al archivo CSS de reset debe estar dentro del head del html y debe ser la primera hoja de estilos que se ha de leer.</strong> Los estilos se leen en forma secuencial, por tanto, si estuviera en otra posición, podría eliminar los estilos definidos por las hojas de estilos anteriores.</p>
+				
+                
+	    </div>
+		<div class="imagen-derecha">
+			     <img src="assets/images/escoba_css.gif" alt="imagen escoba css gif"  width="60%">
+	    </div>
+		</div>
+		<div class="tema2">
+			<br>
+				<p>Ejemplo de link de importación del archivo reset css de Meyer:</p>
+				<img src="assets/images/posicion-reset.jpg" alt="imagen posición reset"  width="100%"/>
+				<br>
+				<p>Este es el link que carga el archivo de reset css:</p>
+				<br>
+					<p class="codigo-texto">&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset<strong>.min</strong>.css" /&gt;</p>
+				<br>
+				<p>El archivo con extensión <strong>.min</strong>, es una versión comprimida que ocupa menos espacio, pues se han eliminado espacios innecesarios, sin perder la funcionalidad.</p>
+              <br>
+			
+				<p>Diversos desarrolladores han creado archivos de reset para CSS.</p>
+			 	<h3>Resets de CSS Más Populares: </h3>
+				  <div class="tabla-resp">
+					<table>
+						<thead>
+							<tr>
+								<th>Sistema de reseteo</th>
+								<th>Descripción</th>
+						   
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-label="Sistema de reseteo">
+									<a href= "https://meyerweb.com/eric/tools/css/reset/" target="_blank" >Reset CSS</a>
+								</td>
+								<td data-label="Descripción">El reset de Eric Meyer, históricamente, quizás el primero.</td>
+							   
+				   
+							</tr>
+							<tr>
+								<td data-label="Sistema de reseteo">
+									<a href= "https://necolas.github.io/normalize.css/" target="_blank" >Normalize.css</a>
+								</td>
+								<td data-label="Descripción">Uno de los reset más tradicionales y populares.</td>
+						 
+							</tr>
+								</tr>
+								<tr>
+								<td data-label="Sistema de reseteo">
+									<a href= "https://html5doctor.com/html-5-reset-stylesheet/" target="_blank" >HTML5 Reset Stylesheet</a>
+								</td>
+								<td data-label="Descripción">Esta hoja de estilo de Richard Clark, es una modificación de la hoja de estilo de reset de CSS de Eric Meyer, orientada a los elementos HTML 5 modernos
+</td>
+						   
+							</tr>
+							<tr>
+								<td data-label="Sistema de reseteo">
+									<a href= "https://github.com/mayank99/reset.css" target="_blank" >A CSS Reset for 2022</a>
+								</td>
+								<td data-label="Descripción">CSS Reset 2022 de Mayank99</td>
+						   
+							</tr>
+								<tr>
+								<td data-label="Sistema de reseteo">
+									<a href= "https://github.com/eduardofierropro/Reset-CSS" target="_blank" >Reset CSS Pro</a>
+								</td>
+								<td data-label="Descripción">Reset CSS de Eduardo Fierro.</td>
+						   
+							</tr>
+								<tr>
+								<td data-label="Sistema de reseteo">
+									<a href= "https://github.com/jensimmons/cssremedy" target="_blank" >CSS Remedy</a>
+								</td>
+								<td data-label="Descripción">CSS Remedy, de Jen Simmons.</td>
+						   
+							</tr>
+								<tr>
+								<td data-label="Sistema de reseteo">
+									<a href= "https://tailwindcss.com/docs/preflight" target="_blank" >Preflight</a>
+								</td>
+								<td data-label="Descripción">Reset CSS de Tailwind CSS.</td>
+						            
+							</tr>
+								<tr>
+								<td data-label="Sistema de reseteo">
+									<a href= "https://www.joshwcomeau.com/css/custom-css-reset/" target="_blank" >Josh W. Comeau</a>
+								</td>
+								<td data-label="Descripción">Un reset moderno, explicado paso a paso..</td>
+						   
+							</tr>
+						
+						</tbody>
+					</table>
+				</div>	
+				<p>También podemos crear nuestra propia hoja de estilos, reseteando solo las propiedades que nos interese y guardarla en nuestro proyecto. El siguiente podría ser un ejemplo sencillo, que podría estar al inicio de nuestro archivo style.css.</p>
+				<pre><code>
+					* {
+						box-sizing: border-box;
+						margin:0;  
+						padding: 0;
+						font-family: "Gill Sans", sans-serif;
+					  }				   
+				</code></pre>
+        <p><strong>Recuerda que en el caso de que el código de reset se escriba en el archivo style.css siempre debe ir al comienzo del archivo.</strong></p>
+		<p>Es posible descargar el archivo de reset css e incorporarlo a nuestro proyecto o bien poner el link al archivo externo.</p>
+		<p>Para encontrar el link al archivo reset, podemos visitar la web del creador y buscar en ella el link al archivo o bien usar un buscador CDN (Content Distribution Net o red de distribución de contenido) para encontrar el link.</p>
+		<br>
+		<p>Encontrar link con actualizaciones:</p>
+		<a href="https://cdnjs.com/libraries">https://cdnjs.com/libraries</a>
+		<br>
+		<p>Links a archivos css reset más utilizados:</p>
+		<ul>
+			<li><a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">https://meyerweb.com/eric/tools/css/reset/</a></li>
+			<li><a href="https://necolas.github.io/normalize.css/" target="_blank">https://necolas.github.io/normalize.css/</a></li>
+			<li><a href="http://html5doctor.com/html-5-reset-stylesheet/" target="_blank">http://html5doctor.com/html-5-reset-stylesheet/</a></li>
+		</ul>
+		<p>En la tabla anterior, los nombres a la izquierda tienen link a cada web correspondiente.</p>
+        <br>
+		<p>Sitios de referencia:</p>
+		<ul>
+			<li><a href="https://3con14.biz/css/conceptos/3-los-reset-de-css.html" target="_blank">https://3con14.biz/css/conceptos/3-los-reset-de-css.html</a></li>
+			<li><a href="https://lenguajecss.com/cascada-css/herencia/reset-css/" target="_blank">https://lenguajecss.com/cascada-css/herencia/reset-css/</a></li>
+		</ul>
+		
+	</div>
+	
+     </section>
+    <!------------------ PSEUDO ELEMENTOS ----------------------->	 
+       
+	   <h2 class="titulo-cabecera-grupo">Pseudo elementos</h2>
+	   <hr>
+	   <!-- section 2-->
+     <section id="section2">
+		<div class="capitulo">
+		<div class="tema">
+          
+                <h2>Pseudo elementos</h2>
+        
+                <p>Se utiliza un pseudo elemento CSS para dar estilos a partes específicas de un elemento.</p>
+				<p>Al igual que las Pseudo-classes, los pseudo-elementos se añaden a los selectores, pero en cambio, no describen un estado especial, sino que, permiten añadir estilos a una parte concreta del documento. Por ejemplo, el pseudoelemento <span class="codigo-texto">::first-line</span> selecciona solo la primera línea del elemento especificado por el selector.</p>
+                <br>
+				<div class="contenedor-imagen"><img src="assets/images/pseudo-elemento.jpg" alt="imágen pseudo elemento"  width="80%"/></div>
+				<p class="destacado">Sintaxis simplificada:</p>
+				<p class="codigo-texto">selector::pseudo-elemento { propiedad: valor; }</p>
+				<p>Muchos navegadores también admiten la sintaxis <span class="codigo-texto">selector:pseudo-elemento { propiedad: valor; }</span>, pero <strong>no se recomienda este uso</strong>.</p>
+				<br>
+				<p class="destacado">Tipos de pseudo elementos</p>
+				<p>Existen varios tipos de pseudo elementos, que se encuentran organizados en categorías. Puedes encontrarlos en la siguiente tabla:</p>
+				<br>
+				<div class="tabla-resp">
+					<table>
+						<thead>
+							<tr>
+								<th>Pseudo elemento</th>
+								<th>Significado</th>
+								<th>Más información</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><b>Contenido generado</b></td>
+								<td>Información generada desde CSS, sin existir en el HTML.</td>
+								<td>Ver <a href="/css/pseudoelementos/after-before/" target="_blank">Contenido generado</a></td>
+							</tr>
+							<tr>
+								<td colspan="2"><code>::before</code>, <code>::after</code></td>
+								<td class="pad"></td>
+							</tr>
+							<tr>
+								<td><b>Contenido tipográfico</b></td>
+								<td>Pseudoelementos relacionados con temas de tipografías.</td>
+								<td>Ver <a href="/css/pseudoelementos/tipograficos/" target="_blank">Tipográfico</a></td>
+							</tr>
+							<tr>
+								<td colspan="2"><code>::first-line</code>, <code>::first-letter</code></td>
+								<td class="pad"></td>
+							</tr>
+							<tr>
+								<td>
+									<b>Contenido destacado</b></td>
+									<td>Pseudoelementos para remarcar o destacar información.</td>
+									<td>Ver <a href="/css/pseudoelementos/resaltado/">Resaltado</a></td>
+								</tr>
+								<tr>
+									<td colspan="2"><code>::selection</code>, <code>::target-text</code>, <code>::spelling-error</code>, <code>::grammar-error</code></td>
+									<td class="pad"></td>
+								</tr>
+								<tr>
+									<td><b>WebComponents</b></td>
+										<td>Pseudoelementos relacionados con WebComponents</td>
+										<td>Ver <a href="https://lenguajejs.com/webcomponents/shadow-dom/slots/" target="_blank">Slots</a> y <a href="https://lenguajejs.com/webcomponents/shadow-dom/css-parts/">Parts</a></td>
+									</tr>
+									<tr>
+										<td colspan="2"><code>::part</code>, <code>::slotted</code></td>
+										<td class="pad"></td>
+									</tr>
+									<tr>
+										<td><b>View Transition API</b></td>
+										<td>Pseudoelementos de transición de cambio de página.</td>
+										<td>Ver <a href="https://lenguajecss.com/css/animaciones/view-transition-api/" target="_blank">View Transitions</a></td>
+									</tr>
+									<tr>
+										<td colspan="2"><code>::view-transition</code>, <code>::view-transition-group</code>, <code>::view-transition-image-pair</code><br> <code>::view-transition-new</code>, <code>::view-transition-old</code></td>
+										<td class="pad"></td>
+									</tr>
+									<tr>
+										<td><b>Otros pseudoelementos</b></td>
+										<td>Pseudoelementos de otras categorías variadas</td>
+										<td>(Ver más abajo)</td>
+									</tr>
+									<tr>
+										<td colspan="2"><code>::marker</code>, <code>::placeholder</code>, <code>::file-selector-button</code></td>
+										<td class="pad"></td>
+									</tr>
+								</tbody>
+							</table>
+				</div>	
+				<p class="destacado">Otros pseudo elementos</p>
+				<p>Al margen de los pseudo elementos anteriores, explicados en su respectiva sección, nos quedan algunos pseudo elementos sin catalogar.</p>
+				<br>
+				<div class="tabla-resp">
+				<table>
+					<thead>
+						<tr>
+							<th>Pseudo elemento</th>
+							<th>Descripción</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>::marker</code></td>
+							<td>Aplica estilos a las marcas o símbolos de cada ítem de una lista.</td>
+						</tr>
+						<tr>
+							<td><code>::backdrop</code></td>
+							<td>Aplica estilos al fondo exterior de un elemento en primer plano (sin que afecte a este).</td>
+						</tr>
+						<tr>
+							<td><code>::placeholder</code></td>
+							<td>Aplica estilos a los textos de sugerencia de los campos <code>&lt;input&gt;</code>.</td>
+						</tr>
+						<tr>
+							<td><code>::file-selector-button</code></td>
+							<td>Aplica estilos a los botones de campo <code>&lt;input&gt;</code> de subir archivos.</td>
+						</tr>
+					</tbody>
+				</table>
+			    </div>
+         </div>
+		</div>
+			
+     </section>
+       <!-- section 3-->
+     <section id="section3">
+		<div class="capitulo">
+		<div class="tema">
+         <h2>::first-line</h2>
+             
+             <p><span class="codigo-texto">::first-line</span> aplica estilos a la primera línea de un párrafo.</p>
+			 <p>Hay toda una serie de propiedades que podremos aplicar:</p>
+			 <ul>
+				<li>•	font properties </li>
+				<li>•	color properties </li>
+				<li>•	background properties </li>
+				<li>•	word-spacing </li>
+				<li>•	letter-spacing </li>
+				<li>•	text-decoration </li>
+				<li>•	vertical-align </li>
+				<li>•	text-transform </li>
+				<li>•	line-height </li>
+				<li>•	clear </li>
+			 </ul>
+			
+         </div>
+		</div>
+		<div class="codigo">
+				<div class="left-column">
+					<div id="editor">
+						<h4>Html</h4>				
+						<textarea id="htmlCode3" placeholder="HTML code"></textarea>
+						<h4>CSS</h4>
+						<textarea id="cssCode3" placeholder="CSS code"></textarea>
+					</div>
+				</div>
+				<div class="right-column">
+					<div class="preview">
+						 <h3>Preview</h3>
+						 <iframe id="preview3"></iframe>
+					</div>
+				</div>
+		 </div>			
+     </section>	
+       <!-- section 4-->
+     <section id="section4">
+		<div class="capitulo">
+		<div class="tema">
+       <h2>::first-letter</h2>
+           
+                <p><span class="codigo-texto">::first-letter</span> aplica estilos a la primera letra de un párrafo.</p>
+                <p>Estas son las propiedades que podremos aplicar:</p>
+				<ul>
+					<li>•	font properties </li>
+					<li>•	color properties </li>
+					<li>•	background properties </li>
+					<li>•	margin properties  </li>
+					<li>•	padding properties </li>
+					<li>•	border properties </li>
+					<li>•	text-decoration </li>
+					<li>•	vertical-align (only if "float" is "none")  </li>
+					<li>•	text-transform </li>
+					<li>•	line-height  </li>
+					<li>•	float </li>
+					<li>•	clear </li>
+				 </ul>
+         </div>
+	
+
+		</div>
+		<div class="codigo">
+				<div class="left-column">
+					<div id="editor">
+						<h4>Html</h4>				
+						<textarea id="htmlCode4" placeholder="HTML code"></textarea>
+						<h4>CSS</h4>
+						<textarea id="cssCode4" placeholder="CSS code"></textarea>
+					</div>
+				</div>
+				<div class="right-column">
+					<div class="preview">
+						 <h3>Preview</h3>
+						 <iframe id="preview4"></iframe>
+					</div>
+				</div>
+		 </div>			
+     </section>	
+		 <!-- section 5-->
+     <section id="section5">
+		<div class="capitulo">
+		<div class="tema">
+           <h2>Pseudo elementos y clases HTML</h2>
+  
+                <p>Los pseudoelementos se pueden combinar con clases de HTML.</p>
+				<br>
+                   
+         </div>
+		</div>
+		<div class="codigo">
+				<div class="left-column">
+					<div id="editor">
+						<h4>Html</h4>				
+						<textarea id="htmlCode5" placeholder="HTML code"></textarea>
+						<h4>CSS</h4>
+						<textarea id="cssCode5" placeholder="CSS code"></textarea>
+					</div>
+				</div>
+				<div class="right-column">
+					<div class="preview">
+						 <h3>Preview</h3>
+						 <iframe id="preview5"></iframe>
+					</div>
+				</div>
+		 </div>			
+       
+   </section>
+<!-- section 6 -->
+   <section id="section6">
+		<div class="capitulo">
+		 <div class="tema">
+                <h2 class="remarcado">Multiples pseudo elements</h2>
+                <p>Se pueden combinar varios pseudo elementos.</p>
+
+			</div>
+			
+		 </div>	
+		 <div class="codigo">
+			<div class="left-column">
+				<div id="editor">
+					<h4>Html</h4>				
+					<textarea id="htmlCode6" placeholder="HTML code"></textarea>
+					<h4>CSS</h4>
+					<textarea id="cssCode6" placeholder="CSS code"></textarea>
+				</div>
+			</div>
+			<div class="right-column">
+				<div class="preview">
+					 <h3>Preview</h3>
+					 <iframe id="preview6"></iframe>
+				</div>
+			</div>
+	 </div>	
+	 </section>		
+      <!-- section 7-->
+     <section id="section7">
+		<div class="capitulo">
+		<div class="tema">
+           <h2 class="titulo-grupo">::before</h2>
+                <p><span class="codigo-texto">::before</span> insertar algún contenido antes de un elemento.</p>
+      
+		</div>
+	  </div>
+	  <div class="codigo">
+		<div class="left-column">
+			<div id="editor">
+				<h4>Html</h4>				
+				<textarea id="htmlCode7" placeholder="HTML code"></textarea>
+				<h4>CSS</h4>
+				<textarea id="cssCode7" placeholder="CSS code"></textarea>
+			</div>
+		</div>
+		<div class="right-column">
+			<div class="preview">
+				 <h3>Preview</h3>
+				 <iframe id="preview7"></iframe>
+			</div>
+		</div>
+    </div>						
+     </section>		
+      <!-- section 8 -->
+     <section id="section8">
+		<div class="capitulo">
+		<div class="tema">
+          <h2>::after</h2>
+       
+            <p><span class="codigo-texto">::after</span> insertar algún contenido después de un elemento. </p>
+            <br> 
+		
+	    </div>
+	
+		</div>
+		<div class="codigo">
+				<div class="left-column">
+					<div id="editor">
+						<h4>Html</h4>				
+						<textarea id="htmlCode8" placeholder="HTML code"></textarea>
+						<h4>CSS</h4>
+						<textarea id="cssCode8" placeholder="CSS code"></textarea>
+					</div>
+				</div>
+				<div class="right-column">
+					<div class="preview">
+						 <h3>Preview</h3>
+						 <iframe id="preview8"></iframe>
+					</div>
+				</div>
+		 </div>			
+     </section>	
+       <!-- section 9 -->
+     <section id="section9">
+		<div class="capitulo">
+		<div class="tema">
+          <h2>::marker</h2>
+               <!-- INSERTAMOS AQUI LOS TEXTOS DE CONTENIDO E IMAGENES -->
+               <p><span class="codigo-texto">::marker</span> permite dar estilos a marcadores de elementos de listas. Funciona en cualquier elemento o pseudo elemento configurado para <span class="codigo-texto">display: list-item</span>, como <span class="codigo-texto">&lt;li&gt; </span> o <span class="codigo-texto">&lt;summary&gt; </span>.</p>
+			   <p><span class="codigo-texto">::marker</span> puede aplicarse a un elemento, pero si no se especifica elemento aplica a todo el documento (<span class="codigo-texto">li::marker</span> o <span class="codigo-texto">::marker</span>).</p>
+	           <p>*El elemento <span class="codigo-texto">&lt;summary&gt;</span> especifica un resumen, un título o una leyenda para un contenido. Al hacer clic en el elemento, se alterna entre el estado abierto y cerrado del contenido.</p>
+               <p>También <span class="codigo-texto">&lt;details&gt;</span> actua como un "toogle" de su contenido.</p>
+			   <p><span class="codigo-texto">::marker</span> no afecta a los estilos del icono de <span class="codigo-texto">&lt;details&gt;</span>.</p>
+		 </div>
+	
+		
+			</div>
+			<div class="codigo">
+					<div class="left-column">
+						<div id="editor">
+							<h4>Html</h4>				
+							<textarea id="htmlCode9" placeholder="HTML code"></textarea>
+							<h4>CSS</h4>
+							<textarea id="cssCode9" placeholder="CSS code"></textarea>
+						</div>
+					</div>
+					<div class="right-column">
+						<div class="preview">
+							 <h3>Preview</h3>
+							 <iframe id="preview9"></iframe>
+						</div>
+					</div>
+	 </div>			
+     </section>	
+       <!-- section 10-->
+        <section id="section10">
+		<div class="capitulo">
+		<div class="tema">
+        <h2>::selection</h2>
+
+            <p><span class="codigo-texto">::selection</span> aplica estilo al elemento seleccionado por el usuario. </p>
+			<p>Puede aplicarse a un elemento, pero si no se especifica elemento aplica todo el documento (<span class="codigo-texto">h1::selection</span> o <span class="codigo-texto">::selection</span>).</p> 
+	        <p><strong>*Se aplica el estilo cuando se hace la selección del texto</strong></p>
+			   <br> 
+			<p>A <span class="codigo-texto">::selection</span> pueden aplicarse estas propiedades:</p>
+			<ul>
+			<li>•	Color </li>
+			<li>•	Background </li>
+			<li>•	Cursor </li>
+			<li>•	Outline (línea fuera del borde) </li>
+			</ul>
+         </div>
+	
+	</div>
+	<div class="codigo">
+            <div class="left-column">
+				<div id="editor">
+                    <h4>Html</h4>				
+                    <textarea id="htmlCode10" placeholder="HTML code"></textarea>
+                    <h4>CSS</h4>
+                    <textarea id="cssCode10" placeholder="CSS code"></textarea>
+				</div>
+            </div>
+            <div class="right-column">
+                <div class="preview">
+                     <h3>Preview</h3>
+                     <iframe id="preview10"></iframe>
+                </div>
+            </div>
+	 </div>			
+        </section>
+       <!-- section 11-->
+        <section id="section11">
+		<div class="capitulo">
+		<div class="tema">
+   <h2>::placeholder</h2>
+      
+            <p><span class="codigo-texto">::placeholder</span> permite dar formato al texto de referencia que se muestra en un campo de introducción de texto, como <span class="codigo-texto">&lt;input>&gt;</span> o <span class="codigo-texto">&lt;textarea&gt;</span>.</p>
+				
+         </div>
+	</div>
+	<div class="codigo">
+            <div class="left-column">
+				<div id="editor">
+                    <h4>Html</h4>				
+                    <textarea id="htmlCode11" placeholder="HTML code"></textarea>
+                    <h4>CSS</h4>
+                    <textarea id="cssCode11" placeholder="CSS code"></textarea>
+				</div>
+            </div>
+            <div class="right-column">
+                <div class="preview">
+                     <h3>Preview</h3>
+                     <iframe id="preview11"></iframe>
+                </div>
+            </div>
+	 </div>			
+        </section>	
+  <!------------------ PSEUDO CLASES ----------------------->		
+		 <h2 class="titulo-cabecera-grupo">Pseudo clases</h2>
+        <hr>
+       <!-- section 12-->
+        <section id="section12">
+		<div class="capitulo">
+		<div class="tema">
+          <h2>Pseudo clases</h2>
+
+            <p>Las pseudo clases, junto con los pseudo elementos, permiten aplicar un estilo a un elemento no sólo en relación con el contenido del árbol de documento, sino también en relación a factores externos como el historial del navegador (<span class="codigo-texto">:visited</span>, por ejemplo), el estado de su contenido (como <span class="codigo-texto">:checked</span> en algunos elementos de formulario), o la posición del ratón (como <span class="codigo-texto">:hover</span> que permite saber si el ratón está encima de un elemento o no).</p>
+   
+				<div class="contenedor-imagen"><img src="assets/images/pseudo-clase.jpg" alt="imágen pseudo elemento"  width="80%"/></div>
+				<p class="destacado">Sintaxis simplificada:</p>
+				<p class="codigo-texto">selector:pseudoclase { propiedad: valor; }</p>
+				<p>Tiene <strong>dos puntos</strong> antes del nombre de la propiedad.</p>
+				<p>Hay un gran número de ellas, actualmente unas 46, veamos algunas de las más comunes:</p>
+				
+				
+         </div>
+	</div>
+		
+        </section>	
+       <!-- section 13-->
+        <section id="section13">
+		<div class="capitulo">
+		<div class="tema">
+   <h2>:hover</h2>
+      
+            <p><span class="codigo-texto">:hover</span> se utiliza para seleccionar y dar estilo al pasar con el ratón por encima de un elemento, y se utiliza normalmente para enlaces, pero puede ser utilizada también para otros elementos.</p>
+			<br>
+			<p>En el siguiente ejemplo la regla CSS aumentará el tamaño de la imagen un 50% al pasar el ratón sobre ella.</p>
+			<p>Se ha puesto una <strong>transition:0.3s;</strong> para que el efecto se suavize</p>
+         </div>
+	</div>
+	<div class="codigo">
+            <div class="left-column">
+				<div id="editor">
+                    <h4>Html</h4>				
+                    <textarea id="htmlCode13" placeholder="HTML code"></textarea>
+                    <h4>CSS</h4>
+                    <textarea id="cssCode13" placeholder="CSS code"></textarea>
+				</div>
+            </div>
+            <div class="right-column">
+                <div class="preview">
+                     <h3>Preview</h3>
+                     <iframe id="preview13"></iframe>
+                </div>
+            </div>
+	 </div>			
+        </section>	
+       <!-- section 14-->
+        <section id="section14">
+		<div class="capitulo">
+		<div class="tema">
+   <h2>:link</h2>
+      
+            <p>La pseudo clase <span class="codigo-texto">:link</span> se utiliza para seleccionar y dar estilo a los enlaces que no fueron visitados.</p>
+			<p><strong>Importante: la pseudo clase :link selecciona solo a los elementos &lt;a&gt; que tienen un atributo href.</strong> </p>	
+         </div>
+	</div>
+	<div class="codigo">
+            <div class="left-column">
+				<div id="editor">
+                    <h4>Html</h4>				
+                    <textarea id="htmlCode14" placeholder="HTML code"></textarea>
+                    <h4>CSS</h4>
+                    <textarea id="cssCode14" placeholder="CSS code"></textarea>
+				</div>
+            </div>
+            <div class="right-column">
+                <div class="preview">
+                     <h3>Preview</h3>
+                     <iframe id="preview14"></iframe>
+                </div>
+            </div>
+	 </div>			
+        </section>			
+   
+	       <!-- section 15-->
+        <section id="section15">
+		<div class="capitulo">
+		<div class="tema">
+   <h2>:visited</h2>
+      
+            <p>La pseudo clase <span class="codigo-texto">:visited</span> se utiliza para seleccionar y dar estilo a los enlaces que ya fueron visitados.</p>
+         </div>
+	</div>
+	<div class="codigo">
+            <div class="left-column">
+				<div id="editor">
+                    <h4>Html</h4>				
+                    <textarea id="htmlCode15" placeholder="HTML code"></textarea>
+                    <h4>CSS</h4>
+                    <textarea id="cssCode15" placeholder="CSS code"></textarea>
+				</div>
+            </div>
+            <div class="right-column">
+                <div class="preview">
+                     <h3>Preview</h3>
+                     <iframe id="preview15"></iframe>
+                </div>
+            </div>
+	 </div>			
+        </section>	
+	       <!-- section 16-->
+        <section id="section16">
+		<div class="capitulo">
+		<div class="tema">
+   <h2>:active</h2>
+      
+            <p>La pseudo clase <span class="codigo-texto">:active</span> especifica y selecciona un elemento activo, y se utiliza normalmente para enlaces <span class="codigo-texto">&lt;a&gt;</span>, pero puede ser utilizada para otros elementos. </p>
+			<p>Decimos que el elemento es activo cuando el usuario hace clic en este elemento, pero antes de levantar el dedo del botón del ratón: o sea en "mousedown".</p>
+         </div>
+	</div>
+	<div class="codigo">
+            <div class="left-column">
+				<div id="editor">
+                    <h4>Html</h4>				
+                    <textarea id="htmlCode16" placeholder="HTML code"></textarea>
+                    <h4>CSS</h4>
+                    <textarea id="cssCode16" placeholder="CSS code"></textarea>
+				</div>
+            </div>
+            <div class="right-column">
+                <div class="preview">
+                     <h3>Preview</h3>
+                     <iframe id="preview16"></iframe>
+                </div>
+            </div>
+	 </div>			
+        </section>	
+       <!-- section 17-->
+        <section id="section17">
+		<div class="capitulo">
+		<div class="tema">
+         <h2>Pseudo clases para enlaces &lt;a&gt; </h2>
+      
+            <p>A la hora de dar estilo a los enlaces <span class="codigo-texto">&lt;a&gt;</span>, es importante comprender cómo utilizar las pseudoclases en sus diferentes estados.</p>
+			
+			<p>Estos son los estados en que puede estar el link:</p>
+			<ul>
+				<li>•	a:link- un enlace normal, no visitado.</li>
+				<li>•	a:visited- un enlace que el usuario ha visitado.</li>
+				<li>•   a:focus- Un enlace cuando tiene el foco*.</li>
+				<li>•	a:hover- un enlace cuando el usuario pasa el ratón sobre él.</li>
+				<li>•	a:active- un enlace en el momento en que se hace clic en él.</li>
+           </ul>
+		     <p>*Se dice que un enlace tiene el foco cuando se salta a este con la tecla Tab del teclado o se le da el foco mediante programación usando HTMLElement.focus().</p>
+             <p>*En muchos casos a:focus no se incluye en las reglas aplicadas al link</p>
+			 <p><strong>Para evitar que los estilos se anulan entre si, hay que seguir un orden a la hora de aplicar las pseudo clases. </strong></p>
+			 <pre><code>
+					a:link {                                      
+					color: green;
+					}
+					a:visited {
+					  color: purple;                       
+					}
+					a:hover {
+					  color: gray;                          
+					}
+					a:active {
+					  color: red;                                 
+					}
+             </code></pre>
+			 <p>Reglas mnemotécnica para aprender el orden de las pseudo clases en el link :</p>
+			 <h2><strong>l</strong>o<strong>v</strong>e and <strong>ha</strong>te</h2>
+			 <ul>
+			 <li>l-:link</li>
+			 <li>v-:visited</li>
+			 <li>h-:hover</li>
+			 <li>a-:active</li>
+            </ul>
+      <p>Cuando usamos focus:</p>
+       <h2><strong>L</strong>o<strong>V</strong>e <strong>F</strong>ears <strong>HA</strong>te.</h2>
+  </p>
+         </div>
+	</div>
+	<div class="codigo">
+            <div class="left-column">
+				<div id="editor">
+                    <h4>Html</h4>				
+                    <textarea id="htmlCode17" placeholder="HTML code"></textarea>
+                    <h4>CSS</h4>
+                    <textarea id="cssCode17" placeholder="CSS code"></textarea>
+				</div>
+            </div>
+            <div class="right-column">
+                <div class="preview">
+                     <h3>Preview</h3>
+                     <iframe id="preview17"></iframe>
+                </div>
+            </div>
+	 </div>			
+        </section>
+	       <!-- section 18-->
+        <section id="section18">
+		<div class="capitulo">
+		<div class="tema">
+   <h2>Child</h2>
+      
+            <p>Elementos child, filtrados de hijos directos.</p>
+			<p>Veamos algunas etiqueta:</p>
+			<p><span class="codigo-texto">:first-child</span> — selecciona solo el primer hijo.</p>
+			<p><span class="codigo-texto">:last-child</span> — selecciona solo el último hijo.</p>
+			<p><span class="codigo-texto">:nth-child(n)</span> — selecciona el n-ésimo hijo (contando desde el inicio).</p>
+			<p><span class="codigo-texto">:nth-last-child(n)</span> — selecciona el n-ésimo hijo contando desde el final.</p>
+			<p><span class="codigo-texto">:only-child</span> — Selecciona elementos que son el único hijo de su contenedor, no tiene hermanos.</p>
+			<br>
+			<p><span class="codigo-texto">:only-of-type</span> — Selecciona elementos que son el único de su tipo en el contenedor.</p>
+			<p><span class="codigo-texto">:nth-of-type(n)</span> — Selecciona el n-ésimo hijo de un tipo específico en el contenedor.</p>
+			<p><span class="codigo-texto">:nth-last-of-type(n)</span> — Selecciona el n-ésimo hijo de un tipo específico desde el final.</p>
+			<p><span class="codigo-texto">:first-of-type</span> — Selecciona el primer hijo de su tipo en el contenedor.</p>
+			<p><span class="codigo-texto">:last-of-type</span> — Selecciona el último hijo de su tipo en el contenedor.</p>
+
+         </div>
+	</div>
+	<div class="codigo">
+            <div class="left-column">
+				<div id="editor">
+                    <h4>Html</h4>				
+                    <textarea id="htmlCode18" placeholder="HTML code"></textarea>
+                    <h4>CSS</h4>
+                    <textarea id="cssCode18" placeholder="CSS code"></textarea>
+				</div>
+            </div>
+            <div class="right-column">
+                <div class="preview">
+                     <h3>Preview</h3>
+                     <iframe id="preview16"></iframe>
+                </div>
+            </div>
+	 </div>			
+        </section>	
+<!------------------ @import ----------------------->		
+		 <h2 class="titulo-cabecera-grupo">@import</h2>
+        <hr>
+	       <!-- section 19-->
+        <section id="section19">
+		<div class="capitulo">
+		<div class="tema">
+         <h2>@import</h2>
+      
+            <p>La regla<span class="codigo-texto">@import</span> permite importar una hoja de estilo en otra hoja de estilo.</p>
+			<p><span class="codigo-texto">@import</span> debe estar en la parte superior de la hoja de estilo. Estas reglas deben preceder a todos los otros tipos de reglas, excepto a las reglas <span class="codigo-texto">@charset.</span></p>
+			<p><span class="codigo-texto">@charset "utf-8"; <br>@import url(ruta/estilos.css);</span></p>
+			<h3>Sintaxis:</h3>
+			<p>El url a utilizar puede aparecer dentro de una anotación funcional url(), o sencilla-mente entre comillas:</p>
+			<p><span class="codigo-texto">@import url(ruta/estilos.css); <br>@import 'ruta/estilos.css';</span></p>
+			<br>
+			<p><span class="codigo-texto">@import url("menu.css");</span>- Fichero en la misma ruta.</p>
+			<p><span class="codigo-texto">@import url("menu/sidebar.css");</span>- Ruta relativa, dentro de menú/ </p>
+			<p><span class="codigo-texto">@import "https://manz.dev/index.css";    </span>- Ruta absoluta, URL completa.</p>
+            <br>
+			<h3> @import y @media </h3>
+			<p><strong>Tampoco puede ser utilizada dentro de un bloque @media</strong>, aunque sí es posible importar una hoja de estilos externa para ser utilizada con un cierto tipo de media.</p>
+			<p><span class="codigo-texto">@import url(estilos/print.css) print;</span></p>
+             <p><span class="codigo-texto">@media print {</span></p>
+             <p><span class="codigo-texto">/* las reglas CSS van aquí */</span></p>
+             <p><span class="codigo-texto">}</span></p>
+             <br>
+			 <h3>Algunos ejemplos:</h3>
+			 <p>Carga la hoja de estilos custom.css</p>
+			<p><span class="codigo-texto">@import "custom.css";</span></p>
+			<p><span class="codigo-texto">@import url("custom.css");</span> </p>
+			<br>
+			<p>Importa la hoja de estilo "mobstyle.css" sólo si el medio es pantalla y la ventana gráfica tiene un máximo de 768 píxeles.</p>
+			<p><span class="codigo-texto">@import "mobstyle.css" screen and (max-width: 768px);</span></p>
+			<br>
+			<p>Esta regla asegura que los estilos en common.css solo se apliquen en dispositivos de pantalla, como monitores, teléfonos, y tablets.</p>  
+			<p><span class="codigo-texto">@import "common.css" screen;</span></p>
+			<br>
+			<p>Esta sólo se cargará cuando la pantalla está en modo horizontal (landscape).</p>
+			<p><span class="codigo-texto">@import url('landscape.css') screen and (orientation:landscape);</span></p>
+			<br>
+			<p>Importar estilos de fuentes de texto
+			<p><span class="codigo-texto">@import url(https://fonts.googleapis.com/css?family=Raleway:400);</span></p>
+			<p><span class="codigo-texto">@import url("https://fonts.googleapis.com/css?family=Raleway:400");</span></p>
+			<p><span class="codigo-texto">@import 'https://fonts.googleapis.com/css?family=Raleway:400';</span></p>
+			<br>
+			<p>Importa la hoja de estilos cuando el dispositivo de salida es un proyector o una tv.</p>
+			<p><span class="codigo-texto">@import url("bluish.css") projection, tv;</span></p>
+			<br>
+			<p>Importa la hoja de estilos cuando el dispositivo de salida es una pantalla o un  proyector.</p>
+			<p><span class="codigo-texto">@import "common.css" screen, projection;</span></p>
+			<br>
+			<p>Carga una hoja de estilo desde una ruta interna de navegador (poco común).</p>
+			<p><span class="codigo-texto">@import url("chrome://communicator/skin/");</span></p>
+			<br>
+			<h3>A tener en cuenta</h3>
+			<p>La declaración <span class="codigo-texto">@import</span> puede tener un efecto negativo en el rendimiento de la página. Por el tiempo que conlleva la carga de estos archivos.</p>	
+         </div>
+	</div>
+		
+        </section>	
+	       
+    </div>
+
+    <!-- Botón Back to Top -->
+    <button id="top-button" onclick="scrollToTop()">↑</button>
+	
+    <!-- Icono de info que abre pdf -->
+    <div class="info-icon">
+        <a href="assets/sources/CSS-selectores-2.pdf" target="_blank">
+            <img src="assets/images/icono-info-negro.svg" alt="Icono de información">
+        </a>
+    </div>
+
+
+   <!-- Footer -->
+    <footer>
+        <h2>F5  -  CSS group</h2>
+        <p>© 2024 grupo 5</p>
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="./assets/js/scriptselectores2.js"></script>
+</body>
+</html>
